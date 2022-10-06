@@ -1,16 +1,18 @@
-import { Container } from '@mui/system';
 import React from 'react'
-import BodyPage from './components/BodyPage';
-import Example from './components/NavBar';
-import TopHead from './components/TopHead';
+import Main from './components/Main';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import WeBuy from './components/WeBuy';
 
 function App() {
   return (
-    <Container>
-      <TopHead />
-      <Example />
-      <BodyPage />
-    </Container>
+    <>
+      <Footer />
+      <NavBar />
+      <Main />
+      <WeBuy />
+      <Footer />
+    </>
   );
 }
 
