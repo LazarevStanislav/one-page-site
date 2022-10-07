@@ -22,7 +22,7 @@ export default function Main ()
   };
   return (
     <>
-      <Card sx={ { backgroundImage: `url(${factory})`, width: '100%', height: '557px'}}>
+      <Card sx={ { backgroundImage: `url(${factory})`, backgroundPosition: 'center',  maxWidth: '100%', height: '557px'}}>
         <Typography variant="h1" sx={{ color: '#fff', fontSize: '52px', fontWeight: '700', lineHeight: '40px', mt: '8rem', textAlign: 'center' }}>
           КУПИМ ВТОРСЫРЬЕ ДОРОГО
         </Typography>

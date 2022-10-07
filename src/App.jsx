@@ -3,6 +3,7 @@ import Main from './components/Main';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import WeBuy from './components/WeBuy';
+import About from './components/About';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <Main />
       <WeBuy />
+      <About name="#8"/>
       <Footer />
     </>
   );
