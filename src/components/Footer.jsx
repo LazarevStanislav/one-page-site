@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Card, CardMedia, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControl, Grid, Input, InputLabel, Select, Slide, Typography } from '@mui/material';
+import { Button, Card, CardMedia, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControl, Grid, Input, InputLabel, Select, Slide, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { forwardRef, useState } from 'react'
 import logo from '../img/logo.png'
@@ -45,20 +45,11 @@ export default function Footer () {
             onClose={handleClose}
             aria-describedby="alert-dialog-description"
           >
-            <DialogTitle>{"Заказать обратный звонок"}</DialogTitle>
-            <DialogContent sx={{ maxWidth: 260, maxHeight: 320}}>
-              <FormControl sx={{ m: 1 }} variant="standard">
-                <InputLabel htmlFor="demo-customized-textbox">Имя</InputLabel>
-                <Input id="demo-customized-textbox" />
-              </FormControl>
-              <FormControl sx={{ m: 1 }} variant="standard">
-                <InputLabel htmlFor="demo-customized-textbox">Телефон</InputLabel>
-                <Input id="demo-customized-textbox" />
-              </FormControl>
-              <FormControl sx={{ m: 1 }} variant="standard">
-                <InputLabel htmlFor="demo-customized-textbox">Email</InputLabel>
-                <Input id="demo-customized-textbox" />
-              </FormControl>
+            <DialogTitle sx={{ textAlign: 'center'}}>{"Заказать обратный звонок"}</DialogTitle>
+            <DialogContent sx={ { maxWidth: 260, maxHeight: 320, textAlign: 'center' } }>
+              <TextField sx={{mt: '1rem'}} id="name" label="Имя" variant="outlined" />
+              <TextField sx={{mt: '1rem'}} id="telephone" label="Телефон" variant="outlined" />
+              <TextField sx={{mt: '1rem'}} id="Email" label="Email" variant="outlined" />
             </DialogContent>
             <DialogActions>
               <Button onClick={handleClose}>Отправить</Button>

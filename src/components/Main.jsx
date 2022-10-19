@@ -1,4 +1,4 @@
-import { Button, Card, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, Input, InputLabel, Slide, Typography } from '@mui/material'
+import { Button, Card, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, Input, InputLabel, Slide, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React, { forwardRef, useState } from 'react'
 import factory from '../img/b01_bg.jpg'
@@ -42,20 +42,11 @@ export default function Main ()
             onClose={handleClose}
             aria-describedby="alert-dialog-slide-description"
           >
-            <DialogTitle>{"Получить консультацию"}</DialogTitle>
-            <DialogContent sx={{ maxWidth: 260, maxHeight: 320}}>
-              <FormControl sx={{ m: 1 }} variant="standard">
-                <InputLabel htmlFor="demo-customized-textbox">Имя</InputLabel>
-                <Input id="demo-customized-textbox" />
-              </FormControl>
-              <FormControl sx={{ m: 1 }} variant="standard">
-                <InputLabel htmlFor="demo-customized-textbox">Телефон</InputLabel>
-                <Input id="demo-customized-textbox" />
-              </FormControl>
-              <FormControl sx={{ m: 1 }} variant="standard">
-                <InputLabel htmlFor="demo-customized-textbox">Email</InputLabel>
-                <Input id="demo-customized-textbox" />
-              </FormControl>
+            <DialogTitle sx={{ textAlign: 'center'}}>{"Получить консультацию"}</DialogTitle>
+            <DialogContent sx={{ maxWidth: 260, maxHeight: 320, textAlign: 'center'}}>
+              <TextField sx={{mt: '1rem'}} id="name" label="Имя" variant="outlined" />
+              <TextField sx={{mt: '1rem'}} id="telephone" label="Телефон" variant="outlined" />
+              <TextField sx={{mt: '1rem'}} id="Email" label="Email" variant="outlined" />
             </DialogContent>
             <DialogActions>
               <Button onClick={handleClose}>Отправить</Button>
